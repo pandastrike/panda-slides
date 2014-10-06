@@ -24,7 +24,7 @@ var SLIDE_CONFIG = {
   presenters: [{
     name: 'A Dashing Panda',
     company: 'Bamboo Eater<br>Panda Strike',
-    // gplus: 'http://plus.google.com/1234567890',
+    gplus: 'http://plus.google.com/1234567890',
     twitter: '@deliciousbamboo',
     www: 'http://www.pandastrike.com',
     github: 'http://github.com/pandastrike'

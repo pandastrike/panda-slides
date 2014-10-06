@@ -341,19 +341,19 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       if (p.company) {
         presenterTitle.push(p.company);
       }
-      html = presenterTitle.join(' - ') + '<br>';
+      html = presenterTitle.join(' &bull; ') + '<br>';
 
-      var gplus = p.gplus ? '<span>g+</span><a href="' + p.gplus +
+      var gplus = p.gplus ? '<span><i class="fa fa-google-plus"></i></span><a href="' + p.gplus +
           '">' + p.gplus.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var twitter = p.twitter ? '<span>twitter</span>' +
+      var twitter = p.twitter ? '<span><i class="fa fa-twitter"></i></span>' +
           '<a href="http://twitter.com/' + p.twitter + '">' +
           p.twitter + '</a>' : '';
 
-      var www = p.www ? '<span>www</span><a href="' + p.www +
+      var www = p.www ? '<span><i class="fa fa-globe"></i></span><a href="' + p.www +
                         '">' + p.www.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var github = p.github ? '<span>github</span><a href="' + p.github +
+      var github = p.github ? '<span><i class="fa fa-github"></i></span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';
 
       var html2 = [gplus, twitter, www, github].join('<br>');
@@ -363,7 +363,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
     } else {
       for (var i = 0, p; p = presenters[i]; ++i) {
-        html.push(p.name + ' - ' + p.company);
+        html.push(p.name + ' &bull; ' + p.company);
       }
       html = html.join('<br>');
       if (dataConfigContact) {

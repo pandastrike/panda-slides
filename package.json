@@ -11,6 +11,7 @@
   "author": "Christoph Wagner <christoph@pandastrike.com>",
   "license": "APL",
   "dependencies": {
+    "font-awesome": "^4.2.0",
     "harp": "^0.14.0"
   }
 }
