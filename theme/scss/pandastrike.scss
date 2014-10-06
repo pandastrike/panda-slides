@@ -137,7 +137,7 @@ slides > slide {
       content: $social-tags;
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
-      left: $slide-left-right-padding;
+      left: $slide-left-right-padding - 20px;
       background: url(../../images/pandastrike-logo-256.png) no-repeat 0 50%;
       @include background-size($brand-small-icon-size $brand-small-icon-size);
       padding-left: $brand-small-icon-size + 10;
@@ -149,7 +149,7 @@ slides > slide {
       content: attr(data-slide-num) '/' attr(data-total-slides);
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
-      right: $slide-left-right-padding;
+      right: $slide-left-right-padding - 20px;
       line-height: 1.9;
     }
   }
