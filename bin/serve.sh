@@ -5,11 +5,12 @@
 # ./serve.sh 3000 -> http://localhost:3000
 #
 # Copyright 2012 Eric Bidelman <ebidel@gmail.com>
+# Copyright 2014 Christoph Wagner <christoph@pandastrike.com>
 
 port=$1
 if [ $#  -ne  1 ]
 then
-  port=8000
+  port=1337
 fi
 
 if [ $(uname -s) == "Darwin" ]
@@ -19,4 +20,5 @@ else
   open=xdg-open
 fi
 
-$open http://localhost:$port/template.html && python -m SimpleHTTPServer $port;
+(sleep 2; $open http://localhost:$port/template.html) &
+harp server -p $port

@@ -36,3 +36,7 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *~
+
+# NPM modules
+#############
+node_modules
