@@ -1,7 +1,7 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'The Panda Way<br>to amazing presentations',
+    title: 'The Panda Way<br>to great presentations',
     subtitle: 'A guide to Enlightenment',
     //eventInfo: {
     //  title: 'Google I/O',
