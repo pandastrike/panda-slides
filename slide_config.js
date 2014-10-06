@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Title Goes Here<br>Up To Two Lines',
-    subtitle: 'Subtitle Goes Here',
+    title: 'The Panda Way<br>to amazing presentations',
+    subtitle: 'A guide to Enlightenment',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -22,12 +22,12 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Firstname Lastname',
-    company: 'Software Engineer<br>Panda Strike',
-    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@Panda_Whisperer',
-    www: 'http://www.you.com',
-    github: 'http://github.com/you'
+    name: 'A Dashing Panda',
+    company: 'Bamboo Eater<br>Panda Strike',
+    // gplus: 'http://plus.google.com/1234567890',
+    twitter: '@deliciousbamboo',
+    www: 'http://www.pandastrike.com',
+    github: 'http://github.com/pandastrike'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
