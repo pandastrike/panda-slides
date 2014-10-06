@@ -1,52 +1,7 @@
-<style>
-@import "http://fonts.googleapis.com/css?family=Open Sans:regular,semibold,italic,italicsemibold|Inconsolata&amp;v2";
-body {
-  font-family: "Open Sans";
-  margin: 6em 2em 2em 2em;
-}
-body:before {
-  content: '';
-  position: fixed;
-  top: 2%;
-  right: 3%;
-  height: 100px;
-  width: 100px;
-  background: url(http://www.html5rocks.com/static/images/identity/HTML5_Badge_128.png) no-repeat 50% 50%;
-  background-size: contain;
-  z-index: 10;
-  opacity: 0.1;
-}
-h1, h2, h3, h4 {
-  font-weight: 600;
-}
-h1 {
-  position: fixed;
-  background: -webkit-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  background: -moz-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  background: -ms-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  background: -o-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  width: 100%;
-  height: 80px;
-  padding: 10px 10px 10px 1em;
-  left: 0;
-  top: 0;
-  margin: 0;
-}
-h1 img {
-  height: 30px;
-  vertical-align: middle;
-  margin-bottom: 8px;
-}
-a { color: navy; }
-pre {
-  background: #eee;
-  margin-left: 2em;
-  padding: 5px;
-  border-left: 3px solid #ccc;
-}
-</style>
+# Panda Slides
 
-<h1><img src="images/io2012_logo.png"> HTML5 Slide Template</h1>
+This is a simple tool for writing slides using HTML5, based on Google's
+[IO 2012 Slides](https://code.google.com/p/io-2012-slides/).
 
 ## Configuring the slides
 
@@ -125,6 +80,7 @@ To disable presenter mode, hit [http://localhost:8000/template.html?presentme=fa
 
 Presenter mode is sticky, so refreshing the page will persist your settings.
 
----
+## Credits
 
-That's all she wrote!
+Credits go to the original authors, [Eric Bidelman](mailto:ebidel@gmail.com)
+and [Luke Mahé](mailto:lukem@google.com). Without their work this would not be possible.
