@@ -20,5 +20,5 @@ else
   open=xdg-open
 fi
 
-(sleep 2; $open http://localhost:$port/template.html) &
+(sleep 2; $open http://localhost:$port/slides.html) &
 harp server -p $port
