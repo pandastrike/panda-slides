@@ -804,6 +804,13 @@ article.smaller {
     width: 418px;
     height: 315px;
   }
+
+  &.dark {
+    img {
+      width: 400px;
+      height: 117px;
+    }
+  }
 }
 
 .segue {
