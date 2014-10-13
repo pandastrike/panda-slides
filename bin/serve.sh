@@ -21,4 +21,4 @@ else
 fi
 
 (sleep 2; $open http://localhost:$port/slides.html) &
-harp server -p $port
+./node_modules/.bin/harp server -p $port
