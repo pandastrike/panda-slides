@@ -21,328 +21,126 @@ slide.title-slide.segue.nobackground
 
 slide
   hgroup
-    h2 Features
+    h2 Outline
   article
     :markdown
-      * Based on [Google I/O 2012 slides](https://code.google.com/p/io-2012-slides)
-      * But "Panda-fied" using Harp and Jade (&rArr; built-in Markdown support!)
-      * Write slides in your `$EDITOR`, not PowerPoint
-      * Built-in support for code snippets with pretty syntax highlighting
-      * Support for speaker notes and presentation mode
-      * Works in any modern browser
-      * Yes, I promise I'll get rid of the annoying popups as soon as I can find out what triggers them!
+      * Why Yet Another Framework?
+      * Polymer architecture
+      * Case Study: Glideroom
 
 slide
   hgroup
-    h2 Slide with Bullets
+    h2  Why Yet Another Framework?
   article
-    ul
-      li Titles are formatted as Open Sans with bold applied and font size is set at 45
-      li Title capitalization is title case
-        ul
-          li Subtitle capitalization is title case
-      li Subtitle capitalization is title case
-      li Titles and subtitles should never have a period at the end
+    :markdown
+      * Polyfills for old browsers
+      * Simpler, declarative syntax
+      * No more `document.registerElement`
+      * Declarative layout using attributes
+      * Component library
+      * UI designer
 
 slide
   hgroup
-    h2 Slide with Bullets that Build
-    h3 Subtitle Placeholder
+    h2 Declarative Syntax
   article
-    p A list where items build:
+    pre.prettyprint(data-lang="html").
+      &lt;!-- import Polymer -->
+      &lt;link rel="import" href="polymer/polymer.html">
+      &lt;!-- define custom element -->
+      &lt;polymer-element name="my-element" noscript>
+        &lt;template>
+          &lt;h2>Hi, I'm a custom element!&lt;/h2>
+        &lt;/template>
+      &lt;/polymer-element>
+
     ul.build
-      li Pressing &apos;h&apos; highlights code snippets
-      li Pressing &apos;p&apos; toggles speaker notes (if they&apos;re on the current slide)
-      li Pressing &apos;f&apos; toggles fullscreen viewing
-      li Pressing &apos;w&apos; toggles widescreen
-      li Pressing &apos;o&apos; toggles overview mode
-      li Pressing &apos;ESC&apos; toggles off these goodies
-    p Another list, but items fade as they build:
-    ul.build.fade
-      li Hover over me!
-      li Hover over me!
-      li Hover over me!
+      li Polymer uses custom elements to define custom elements (Yo dawg...)
+      li <code>&lt;template></code> defines the contents of the Shadow DOM
+      li <code>noscript</code> attribute lets us define element without JavaScript
 
 slide
   hgroup
-    h2 Slide with (Smaller Font)
-  article.smaller
-    ul
-      li All <a href='http://pandastrike.com'>links</a> open in new tabs.
-      li To change that this, add <code>target=&quot;_self&quot;</code> to the link.
-
-slide(hidden='')
-  | Hidden slides are left out of the presentation.
-
-slide
-  hgroup
-    h2 Code Slide (with Subtitle Placeholder)
-    h3 Subtitle Placeholder
+    h2 Using it
   article
-    p Press &apos;h&apos; to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).
-    pre.prettyprint(data-lang='javascript').
-      // Say hello world until the user starts questioning
-      // the meaningfulness of their existence.
-      function helloWorld(world) {
-        <b>for (var i = 42; --i &gt;= 0;) {
-          alert('Hello ' + String(world));
-        }</b>
-      }
-
-slide
-  hgroup
-    h2 Code Slide (Smaller Font)
-  article.smaller
-    pre.prettyprint(data-lang='javascript').
-      // Say hello world until the user starts questioning
-      // the meaningfulness of their existence.
-      function helloWorld(world) {
-        for (var i = 42; --i >= 0;) {
-          alert('Hello ' + String(world));
-        }
-      }
-
-    pre.prettyprint(data-lang='css').
-      &lt;style&gt;
-        p { color: pink }
-        b { color: blue }
-      &lt;/style&gt;
-
-    pre.prettyprint(data-lang='html').
-      &lt;!DOCTYPE html>
-      &lt;html>
+    pre.prettyprint(data-lang="html").
       &lt;head>
-        &lt;title>My Awesome Page&lt;/title>
-      &lt;/head>
+        &lt;!-- load platform polyfills -->
+        &lt;script src="platform/platform.js">&lt;/script>
+        &lt;!-- import custom elements -->
+        &lt;link rel="import" href="polymer/polymer.html">
+        &lt;link rel="import" href="my-element.html">
+      &lt/head>
+
       &lt;body>
-        &lt;p>Hello world&lt;/p>
-      &lt;body>
-      &lt;/html>
+        &lt;my-element>&lt;/my-element>
+      &lt;/body>
+
+    h3 Preview
+    iframe#example1(data-src="/examples/1/index.html" style="height: 70px")
 
 slide
-  aside.note
-    section
-      ul
-        li Point I wanted to make #1
-        li Point I wanted to make #2
-        li Point I wanted to make #3
-        li Example <a href='#'>link</a> in notes.
-      p
-        b Remember to say this tag line!
   hgroup
-    h2 Slide with Speaker Notes
+    h2 Data Binding
   article
-    p Press &apos;p&apos; to toggle speaker notes.
+    pre.prettyprint(data-lang="html").
+      &lt;polymer-element name="my-element">
+        &lt;template>
+          &lt;h2><b>{{greeting}}</b>&lt;/h2>
+        &lt;/template>
+        &lt;script src="my-element.js">&lt;/script>
+      &lt;/polymer-element>
+
+    pre.prettyprint(data-lang="javascript").
+      Polymer("my-element", {
+        <b>greeting: "Hi, I'm a custom element!"</b>
+      });
+
+    h3 Preview
+    iframe#example2(data-src="/examples/2/index.html" style="height: 70px")
 
 slide
-  aside.note
-    section
-      ul
-        li See this amazing link: <a href='http://www.pandastrike.com'>link</a>.
-      p
-        b Remember to say this tag line!
   hgroup
-    h2 Presenter Mode
+    h2 Declarative Event Mapping
   article
-    p
-      | Add 
-      code
-        a(href='?presentme=true', target='_self') ?presentme=true
-      |  to the URL to enabled presenter mode.
-      |  This setting is sticky, meaning refreshing the page will persist presenter mode.
-    p
-      | Hit 
-      code
-        a(href='?presentme=false', target='_self') ?presentme=false
-      |  to disable presenter mode.
+    pre.prettyprint(data-lang="html").
+      &lt;polymer-element name="my-element" <b>on-click="{{clickHandler}}"</b>>
+        &lt;template>
+          &lt;h2>{{greeting}}&lt;/h2>
+        &lt;/template>
+        &lt;script src="my-element.js">&lt;/script>
+      &lt;/polymer-element>
+
+    pre.prettyprint(data-lang="javascript").
+      Polymer("my-element", {
+        greeting: "Hi, I'm a custom element",
+        <b>clickHandler: function() {
+          this.greeting = "Hello, " + prompt("What is your name?") + "!";
+        }</b>
+      });
+
+    iframe#example3(data-src="/examples/3/index.html" style="height: 70px")
 
 slide
   hgroup
-    h2 Slide with Image
+    h2
   article
-    img.reflect(src='images/chart.png', alt='Description', title='Description')
-    footer.source source: place source info here
 
-slide
-  hgroup
-    h2 Slide with Image (Centered horz/vert)
-  article.flexbox.vcenter
-    img(src='images/barchart.png', alt='Description', title='Description')
-    footer.source source: place source info here
-
-slide
-  hgroup
-    h2 Table Option A
-    h3 Subtitle Placeholder
-  article
-    table
-      tr
-        th
-        th Column 1
-        th Column 2
-        th Column 3
-        th Column 4
-      tr
-        td Row 1
-        td placeholder
-        td.highlight placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 2
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 3
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 4
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 5
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-
-slide
-  hgroup
-    h2 Table Option A (Smaller Text)
-    h3 Subtitle Placeholder
-  article.smaller
-    table
-      tr
-        th
-        th Column 1
-        th Column 2
-        th Column 3
-        th Column 4
-      tr
-        td Row 1
-        td placeholder
-        td.highlight placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 2
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 3
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 4
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        td Row 5
-        td placeholder
-        td placeholder
-        td placeholder
-        td placeholder
-
-slide
-  hgroup
-    h2 Table Option B
-    h3 Subtitle Placeholder
-  article
-    table.rows
-      tr
-        th Header 1
-        td placeholder
-        td.highlight placeholder
-        td placeholder
-      tr
-        th Header 2
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        th Header 3
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        th Header 4
-        td placeholder
-        td placeholder
-        td placeholder
-      tr
-        th Header 5
-        td placeholder
-        td placeholder
-        td placeholder
-
-slide
-  hgroup
-    h2 Slide Styles
-  article.smaller
-    .columns-2
-      ul
-        li.red class=&quot;red&quot;
-        li.red2 class=&quot;red2&quot;
-        li.red3 class=&quot;red3&quot;
-        li.blue class=&quot;blue&quot;
-        li.blue2 class=&quot;blue2&quot;
-        li.blue3 class=&quot;blue3&quot;
-        li.green class=&quot;green&quot;
-        li.green2 class=&quot;green2&quot;
-      ul
-        li.green3 class=&quot;green3&quot;
-        li.yellow class=&quot;yellow&quot;
-        li.yellow2 class=&quot;yellow2&quot;
-        li.yellow3 class=&quot;yellow3&quot;
-        li.gray class=&quot;gray&quot;
-        li.gray2 class=&quot;gray2&quot;
-        li.gray3 class=&quot;gray3&quot;
-        li.gray4 class=&quot;gray4&quot;
-    .centered(style='margin-top:2em')
-      | I am centered text with a <button>Button</button>
-      | and <button disabled>Disabled</button> button.
 
 slide.segue.dark.nobackground
-  aside.gdbar
-    img(src='images/pandastrike-logo-256.png')
-  hgroup.auto-fadein
-    h2 Segue Slide
-    h3 Subtitle Placeholder
-
-slide.fill.nobackground(style='background-image: url(images/sky.jpg)')
-  hgroup
-    h2.white Full Image (with Optional Header)
-  footer.source.white www.flickr.com/photos/25797459@N06/5438799763/
-
-slide.segue.dark.quote.nobackground
   aside.gdbar.right.bottom
     img(src='images/pandastrike-logo-256.png')
-  article.flexbox.vleft.auto-fadein
-    q This is an example of quote text.
-    .author Name <br/> Company
+  hgroup.auto-fadein
+    h2 Declarative Layout
+    h3 Flexbox made simple
 
 slide
   hgroup
-    h2 Slide with Iframe
+    h2 Use attributes, not CSS
   article
-    iframe(data-src='http://www.pandastrike.com/#about-us')
-
-slide
-  article
-    iframe(data-src='http://www.pandastrike.com/#about-us')
+    pre.prettyprint(data-lang="html").
+      &lt;div layout horizontal>
+      &lt;/div>
 
 slide.thank-you-slide.segue.nobackground
   aside.gdbar.right
@@ -359,4 +157,10 @@ slide.logoslide.dark.nobackground
       img(src='images/pandastrike-wide.png')
 
 slide.backdrop
+
+script(type="text/javascript").
+  // find all iframes and define shortcut variables according to their IDs
+  [].slice.apply(document.querySelectorAll("iframe")).forEach(function(example) {
+    window[example.id] = example;
+  });
 
