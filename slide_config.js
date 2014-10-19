@@ -23,7 +23,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Christoph Wagner',
-    company: 'Software Engineer<br>Panda Strike',
+    company: 'Panda Strike',
     // gplus: 'http://plus.google.com/1234567890',
     twitter: '@Panda_Whisperer',
     www: 'http://www.pandastrike.com',
