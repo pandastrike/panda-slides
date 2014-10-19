@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+
+  head
+    // load platform polyfills
+    script(src="../bower_components/platform/platform.js")
+    // import custom elements
+    link(rel="import", href="../bower_components/polymer/polymer.html")
+    link(rel="import", href="my-element.html")
+
+  body(unresolved)
+    my-element
