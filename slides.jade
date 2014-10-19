@@ -34,11 +34,15 @@ slide
   article
     :markdown
       * Polyfills for old browsers
-      * Simpler, declarative syntax
-      * No more `document.registerElement`
+      * Declarative element creation (No more `document.registerElement`)
+      * Declarative event mapping
       * Declarative layout using attributes
       * Component library
       * UI designer
+
+slide
+  article.flexbox.vcenter
+    img.reflect(src="images/declare_all_the_things.jpg")
 
 slide
   hgroup
@@ -119,7 +123,7 @@ slide
 
     pre.prettyprint(data-lang="javascript").
       Polymer("my-element", {
-        greeting: "Hi, I'm a custom element",
+        greeting: "Click me!",
         <b>clickHandler: function() {
           this.greeting = "Hello, " + prompt("What is your name?") + "!";
         }</b>
@@ -129,24 +133,67 @@ slide
 
 slide
   hgroup
-    h2
+    h2 Declarative Layout
+    h3 Flexbox made simple
   article
+    p Use attributes, not CSS!
+    pre.prettyprint(data-lang="html").
+      &lt;div layout horizontal>
+        &lt;div>One&lt;/div>
+        &lt;div>Two&lt;/div>
+        &lt;div>Three&lt;/div>
+      &lt;/div>
 
+    p Result
+    iframe(data-src="/examples/flexbox/index1.html" style="height: 80px")
+
+slide
+  hgroup
+    h2 Declarative Layout
+    h3 Flexbox made simple
+  article
+    p How about some flex?
+    pre.prettyprint(data-lang="html").
+      &lt;div layout horizontal>
+        &lt;div>One&lt;/div>
+        &lt;div flex>Two&lt;/div>
+        &lt;div>Three&lt;/div>
+      &lt;/div>
+
+    p Result
+    iframe(data-src="/examples/flexbox/index2.html" style="height: 80px")
+
+slide
+  hgroup
+    h2 Declarative Layout
+    h3 Flexbox made simple
+  article
+    p Flex with proportions
+    pre.prettyprint(data-lang="html").
+      &lt;div layout horizontal>
+        &lt;div flex>One&lt;/div>
+        &lt;div flex two>Two&lt;/div>
+        &lt;div flex three>Three&lt;/div>
+      &lt;/div>
+
+    p Result
+    iframe(data-src="/examples/flexbox/index3.html" style="height: 80px")
 
 slide.segue.dark.nobackground
   aside.gdbar.right.bottom
     img(src='images/pandastrike-logo-256.png')
   hgroup.auto-fadein
-    h2 Declarative Layout
-    h3 Flexbox made simple
+    h2 Resources
 
 slide
   hgroup
-    h2 Use attributes, not CSS
+    h2 Resources
   article
-    pre.prettyprint(data-lang="html").
-      &lt;div layout horizontal>
-      &lt;/div>
+    :markdown
+      * Polymer Project: [polymer-project.org](https://www.polymer-project.org)
+      * Polymer API docs: [bit.ly/polymer-api](http://bit.ly/polymer-api)
+      * Polymer Databinding: [bit.ly/polymer-databinding](http://bit.ly/polymer-databinding)
+      * Polymer Layout Reference: [bit.ly/polymer-layout](http://bit.ly/polymer-layout)
 
 slide.thank-you-slide.segue.nobackground
   aside.gdbar.right

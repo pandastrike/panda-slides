@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+
+  head
+    // load platform polyfills
+    script(src="../bower_components/platform/platform.js")
+    // import custom elements
+    link(rel="import", href="../bower_components/polymer/polymer.html")
+    link(rel="stylesheet", href="index.css")
+
+  body
+    div.container(layout horizontal)
+      div One
+      div(flex) Two
+      div Three
