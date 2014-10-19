@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'The Panda Way<br>to great presentations',
-    subtitle: 'A guide to Enlightenment',
+    title: 'Cultural Learnings of Polymer<br>for Make Benefit Great Progress of Web Developers',
+    // subtitle: 'A guide to Enlightenment',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -22,10 +22,10 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'A Dashing Panda',
-    company: 'Bamboo Eater<br>Panda Strike',
-    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@deliciousbamboo',
+    name: 'Christoph Wagner',
+    company: 'Software Engineer<br>Panda Strike',
+    // gplus: 'http://plus.google.com/1234567890',
+    twitter: '@Panda_Whisperer',
     www: 'http://www.pandastrike.com',
     github: 'http://github.com/pandastrike'
   }/*, {
