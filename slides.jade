@@ -85,8 +85,28 @@ slide
         &lt;my-element>&lt;/my-element>
       &lt;/body>
 
-    h3 Preview
+    h3 Result
     iframe#example1(data-src="/examples/1/index.html" style="height: 70px")
+
+slide(hidden)
+  hgroup
+    h2 Light &amp; Shadow
+  article
+    p <code>&lt;content></code> defines an insertion point
+    p It will contain the contents of the custom tag (a.k.a Light DOM)
+
+    pre.prettyprint(data-lang="html").
+      &lt;polymer-element name="my-element" noscript>
+        &lt;template>
+          &lt;h2>Hi, I'm <b>&lt;content>&lt;/content></b>&lt;/h2>
+        &lt;/template>
+      &lt;/polymer-element>
+
+    pre.prettyprint(data-lang="html").
+      &lt;my-element>Light DOM&lt;/my-element>
+
+    h3 Result
+    iframe#example1(data-src="/examples/1b/index.html" style="height: 70px")
 
 slide
   hgroup
@@ -105,7 +125,7 @@ slide
         <b>greeting: "Hi, I'm a custom element!"</b>
       });
 
-    h3 Preview
+    h3 Result
     iframe#example2(data-src="/examples/2/index.html" style="height: 70px")
 
   aside.note
@@ -183,6 +203,80 @@ slide
 
     p Result
     iframe(data-src="/examples/flexbox/index3.html" style="height: 80px")
+
+slide.segue.dark.nobackground
+  aside.gdbar.right.bottom
+    img(src='images/pandastrike-logo-256.png')
+  hgroup.auto-fadein
+    h2 Case Study
+    h3 Glideroom.com
+
+slide
+  hgroup
+    h2 Overview
+    h3 What is Glideroom?
+  article
+   ul
+     li Video conferencing in your browser
+     li Built on WebRTC
+     li NO registration necessary
+     li Get a room with a single click
+     li We call it: "Hangouts without the Hangups"
+
+slide
+  hgroup
+    h2 Architecture
+  article
+    ul
+      li Front-end built entirely with Polymer
+      li Component-based architecture
+      li Everything is a custom element
+      li Emphasis on small, focused, reusable components
+      li Components interact via well-defined public API
+      li Asynchronous communication via events
+
+slide
+  hgroup
+    h2 Show me the Code!
+    h3 room.html
+  article
+    pre.prettyprint(data-lang="html").
+      &lt;glideroom-backend configuration="/configuration.json">&lt;/glideroom-backend>
+      &lt;div vertical layout fit>
+        &lt;glideroom-toolbar>&lt;/glideroom-toolbar>
+        &lt;div horizontal layout flex>
+          &lt;glideroom-conference flex>&lt;/glideroom-conference>
+          &lt;core-splitter direction="right" touch-action="none">&lt;/core-splitter>
+          &lt;glideroom-chat>&lt;/glideroom-chat>
+        &lt;/div>
+        &lt;footer-element>&lt;/footer-element>
+      &lt;/div>
+      &lt;glideroom-notification>&lt;/glideroom-notification>
+      &lt;glideroom-dialog-entry id="entry">&lt;/glideroom-dialog-entry>
+      &lt;glideroom-dialog-settings id="settings">&lt;/glideroom-dialog-settings>
+      &lt;script type="text/javascript" src="/js/room.js">&lt;/script>
+
+slide
+  hgroup
+    h2 Show me the Code!
+    h3 room.js
+  article
+    pre.prettyprint(data-lang="javascript").
+      <b>var backend = document.querySelector("glideroom-backend");</b>
+      var chat = document.querySelector("glideroom-chat");
+
+      window.addEventListener("polymer-ready", function() {
+        chat.addEventListener("chat-message", function(event) {
+          backend.sendMessage(event.detail);
+        });
+        <b>backend.addEventListener("room-event", function(event) {
+          chat.addMessage(event.detail);
+          conference.processEvent(event.detail);
+        });</b>
+        backend.addEventListener("room-ready", function(event) {
+          conference.start(event.detail);
+        });
+      });
 
 slide.segue.dark.nobackground
   aside.gdbar.right.bottom
