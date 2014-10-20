@@ -241,20 +241,21 @@ slide
     h3 room.html
   article
     pre.prettyprint(data-lang="html").
-      &lt;glideroom-backend configuration="/configuration.json">&lt;/glideroom-backend>
-      &lt;div vertical layout fit>
-        &lt;glideroom-toolbar>&lt;/glideroom-toolbar>
-        &lt;div horizontal layout flex>
-          &lt;glideroom-conference flex>&lt;/glideroom-conference>
-          &lt;core-splitter direction="right" touch-action="none">&lt;/core-splitter>
-          &lt;glideroom-chat>&lt;/glideroom-chat>
+      &lt;body>
+        <b>&lt;glideroom-backend configuration="/configuration.json">&lt;/glideroom-backend></b>
+        &lt;div vertical layout fit>
+          &lt;glideroom-toolbar>&lt;/glideroom-toolbar>
+          &lt;div horizontal layout flex>
+            <b>&lt;glideroom-conference flex>&lt;/glideroom-conference></b>
+            &lt;core-splitter direction="right" touch-action="none">&lt;/core-splitter>
+            <b>&lt;glideroom-chat>&lt;/glideroom-chat></b>
+          &lt;/div>
+          &lt;footer-element>&lt;/footer-element>
         &lt;/div>
-        &lt;footer-element>&lt;/footer-element>
-      &lt;/div>
-      &lt;glideroom-notification>&lt;/glideroom-notification>
-      &lt;glideroom-dialog-entry id="entry">&lt;/glideroom-dialog-entry>
-      &lt;glideroom-dialog-settings id="settings">&lt;/glideroom-dialog-settings>
-      &lt;script type="text/javascript" src="/js/room.js">&lt;/script>
+        &lt;glideroom-dialog-entry id="entry">&lt;/glideroom-dialog-entry>
+        &lt;glideroom-dialog-settings id="settings">&lt;/glideroom-dialog-settings>
+        &lt;script src="js/room.s">&lt;/script>
+      &lt;/body>
 
 slide
   hgroup
