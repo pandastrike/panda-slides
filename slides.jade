@@ -31,17 +31,19 @@ slide
 slide
   hgroup
     h2  Why Yet Another Framework?
-  article
-    :markdown
-      * Polyfills for old browsers
-      * Declarative element creation (No more `document.registerElement`)
-      * Declarative event mapping
-      * Declarative layout using attributes
-      * Component library
-      * UI designer
-
-slide
   article.flexbox.vcenter
+    ul.build
+      li Polyfills for old browsers
+      li Declarative element creation (No more <code>document.registerElement</code>)
+      li Declarative event mapping
+      li Declarative layout using attributes
+
+      li But wait, there's more!
+      ul
+        li Component library
+        li UI designer
+
+  aside.note
     img.reflect(src="images/declare_all_the_things.jpg")
 
 slide
@@ -59,13 +61,16 @@ slide
       &lt;/polymer-element>
 
     ul.build
-      li Polymer uses custom elements to define custom elements (Yo dawg...)
+      li Polymer uses custom elements to define custom elements
       li <code>&lt;template></code> defines the contents of the Shadow DOM
       li <code>noscript</code> attribute lets us define element without JavaScript
 
+  aside.note
+    img(src="images/yo_dawg.jpg")
+
 slide
   hgroup
-    h2 Using it
+    h2 Let's use it!
   article
     pre.prettyprint(data-lang="html").
       &lt;head>
@@ -190,17 +195,26 @@ slide
     h2 RTFM
   article
     :markdown
-      * Polymer Project: [polymer-project.org](https://www.polymer-project.org)
-      * Polymer API docs: [bit.ly/polymer-api](http://bit.ly/polymer-api)
-      * Polymer Databinding: [bit.ly/polymer-databinding](http://bit.ly/polymer-databinding)
-      * Polymer Layout Reference: [bit.ly/polymer-layout](http://bit.ly/polymer-layout)
+      * Polymer
+        - Polymer Project: [polymer-project.org](https://www.polymer-project.org)
+        - Polymer API docs: [bit.ly/polymer-api](http://bit.ly/polymer-api)
+        - Polymer Databinding: [bit.ly/polymer-databinding](http://bit.ly/polymer-databinding)
+        - Polymer Layout Reference: [bit.ly/polymer-layout](http://bit.ly/polymer-layout)
+      * Components
+        - Core Elements: [bit.ly/core-elements](http://bit.ly/core-elements)
+        - Core Elements Demo: [bit.ly/core-elements-demo](http://bit.ly/core-elements-demo)
+        - Paper Elements: [bit.ly/paper-elements](http://bit.ly/paper-elements-demo)
+        - Paper Elements Demo: [bit.ly/paper-elements-demo](http://bit.ly/paper-elements-demo)
+      * Other Resources
+        - Built with Polymer: [builtwithpolymer.org](http://builtwithpolymer.org)
+        - Polymer Themes: [polymerthemes.com](https://polymerthemes.com)
 
 slide.thank-you-slide.segue.nobackground
   aside.gdbar.right
     img(src='images/pandastrike-logo-256.png')
   article.flexbox.vleft.auto-fadein
     h2 &lt;Thank You!&gt;
-    p Important contact information goes here.
+    // p Important contact information goes here.
   p.auto-fadein(data-config-contact='')
     // populated from slide_config.json
 
