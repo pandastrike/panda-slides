@@ -22,29 +22,24 @@
 }
 
 @mixin flexbox {
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-box !important;
-  display: -o-box !important;
-  display: box !important;
+  display: flex !important;
 }
 
 @mixin flex-center-center {
-  @include box-orient(vertical);
-  @include box-align(center);
-  @include box-pack(center);
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex-left-center {
-  @include box-orient(vertical);
-  @include box-align(left);
-  @include box-pack(center);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 @mixin flex-right-center {
-  @include box-orient(vertical);
-  @include box-align(end);
-  @include box-pack(center);
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 /**
