@@ -2,7 +2,6 @@
 
 @import "compass/functions";
 @import "compass/reset";
-@import "compass/css3/images";
 
 @import "variables";
 
@@ -47,6 +46,10 @@
 
 @mixin background($val) {
   background: $val;
+}
+
+@mixin background-image($val-1, $val-2: false, $val-3: false) {
+  background-image: compact($val-1, $val-2, $val-3);
 }
 
 @mixin background-size($val) {
