@@ -2,7 +2,6 @@
 
 @import "compass/functions";
 @import "compass/reset";
-@import "compass/css3/box-sizing";
 @import "compass/css3/images";
 
 @import "variables";
@@ -56,6 +55,10 @@
 
 @mixin border-radius($val) {
   border-radius: $val;
+}
+
+@mixin box-sizing($val) {
+  box-sizing: $val;
 }
 
 @mixin transform($val) {
