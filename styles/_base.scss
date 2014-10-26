@@ -8,7 +8,6 @@
 @import "compass/css3/box-sizing";
 @import "compass/css3/images";
 @import "compass/css3/text-shadow";
-@import "compass/css3/background-size";
 @import "compass/css3/transform";
 
 @import "variables";
@@ -41,8 +40,23 @@
   justify-content: center;
 }
 
+/**
+ * Transitionary mixins:
+ * These replace mixins that ship with Compass, 
+ * but are not longer needed because we are using
+ * autoprefixer now
+ */
+
 @mixin transition($val) {
   transition: $val;
+}
+
+@mixin background($val) {
+  background: $val;
+}
+
+@mixin background-size($val) {
+  background-size: $val;
 }
 
 /**

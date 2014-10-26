@@ -488,7 +488,7 @@ table {
   th {
     color: white;
     font-size: 18px;
-    @include background(linear-gradient(top, $brand-blue 40%, $brand-blue-secondary2 80%) no-repeat);
+    @include background(linear-gradient(to bottom, $brand-blue 40%, $brand-blue-secondary2 80%) no-repeat);
   }
 
   td, th {
@@ -498,7 +498,7 @@ table {
 
   td.highlight {
     color: $gray-4;
-    @include background(linear-gradient(top, $brand-yellow 40%, $brand-yellow-secondary2 80%) no-repeat);
+    @include background(linear-gradient(to bottom, $brand-yellow 40%, $brand-yellow-secondary2 80%) no-repeat);
   }
 
   &.rows {
@@ -859,7 +859,7 @@ aside.gdbar {
   left: -1px;
   top: 125px;
   @include border-radius(0 10px 10px 0);
-  @include background(linear-gradient(left, $gray-1, $gray-1) no-repeat);
+  @include background(linear-gradient(to right, $gray-1, $gray-1) no-repeat);
   @include background-size(0% 100%);
   @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
 
