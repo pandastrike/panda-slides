@@ -1,5 +1,3 @@
-@import "compass/css3/background-size";
-
 @import "variables";
 
 * {
@@ -24,7 +22,7 @@ slides > slide {
     &:after {
       content: '';
       background: url(../../images/io2013/google-io-lockup-1.png) no-repeat 100% 50%;
-      @include background-size(contain);
+      background-size: contain;
       position: absolute;
       bottom: $slide-top-bottom-padding + 40;
       right: $slide-top-bottom-padding;

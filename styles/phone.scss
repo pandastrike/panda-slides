@@ -1,6 +1,3 @@
-@import "compass/css3/transition";
-
-
 /*Smartphones (portrait and landscape) ----------- */
 /*@media only screen
 and (min-width : 320px)
@@ -21,8 +18,7 @@ slides > slide {
   margin-top: -$slide-height / 2 !important;
 */
   // Don't do full slide transitions on mobile.
-  -webkit-transition: none !important; // Bug in compass? Not sure why the below is not working
-  @include transition(none !important);
+  transition: none !important;
 }
 
 //}
