@@ -668,7 +668,7 @@ article.smaller {
       background: white;
       @include transition(none); // No slide transition goodies when in presenter mode.
       pointer-events: none;
-      @include transform-origin(0, 0); // For speaker note transition.
+      transform-origin: 0, 0; // For speaker note transition.
 
       &:not(.backdrop) {
         @include transform(scale(0.6) translate3d(0.5em, 0.5em, 0));

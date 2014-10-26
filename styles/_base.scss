@@ -7,7 +7,6 @@
 @import "compass/css3/box-sizing";
 @import "compass/css3/images";
 @import "compass/css3/text-shadow";
-@import "compass/css3/transform";
 
 @import "variables";
 
@@ -56,6 +55,18 @@
 
 @mixin background-size($val) {
   background-size: $val;
+}
+
+@mixin transform($val) {
+  transform: $val;
+}
+
+@mixin transform-style($val) {
+  transform-style: $val;
+}
+
+@mixin perspective($val) {
+  perspective: $val;
 }
 
 /**
