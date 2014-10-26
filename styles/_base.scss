@@ -3,7 +3,6 @@
 @import "compass/functions";
 @import "compass/reset";
 @import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
 @import "compass/css3/box-sizing";
 @import "compass/css3/images";
 @import "compass/css3/text-shadow";
@@ -67,6 +66,10 @@
 
 @mixin perspective($val) {
   perspective: $val;
+}
+
+@mixin box-shadow($val-1, $val-2: false, $val-3: false) {
+  box-shadow: compact($val-1, $val-2, $val-3);
 }
 
 /**
