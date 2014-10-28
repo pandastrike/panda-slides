@@ -30,6 +30,7 @@ slide
       * Built-in support for code snippets with pretty syntax highlighting
       * Support for speaker notes and presentation mode
       * Works in any modern browser
+      * Read on to see a demo of features, or learn [how to get started](#23)
 
 slide
   hgroup
@@ -342,6 +343,52 @@ slide
 slide
   article
     iframe(data-src='http://www.pandastrike.com/#about-us')
+
+slide.segue.dark.nobackground
+  aside.gdbar
+    img(src='images/pandastrike-logo-256.png')
+  hgroup.auto-fadein
+    h2 Getting Started
+
+slide
+  hgroup
+    h2 Getting Started with Panda Slides
+  article
+    :markdown
+      Install Harp, if you don't already have it:
+
+           npm install -g harp
+
+      Create a new slide deck:
+
+           harp init [name] -b pandastrike/panda-slides
+
+      **NOTE**: If `name` is omitted, slides will be created in the current directory.
+
+      Start a server for live preview:
+
+           harp server -p 1337
+
+      Open your browser and go to [http://localhost:1337/](http://localhost:1337/)
+
+slide
+  hgroup
+    h2 Editing Slides
+  article
+    :markdown
+      * Slides are written in [Jade](http://jade-lang.com) and can be edited in any text editor
+      * Simply open `index.jade` after creating a new slide set and customize away
+      * Save and reload your browser preview to see changes
+      * Add your own images under `images/`
+      * Customize the stylesheet in `styles/`
+
+      When you're ready to upload your slides to a web server, simply run
+
+          harp compile -o slides
+
+      From the your slide directory.
+
+      Your static HTML slides can then be found in a subdirectory called `slides/`
 
 slide.thank-you-slide.segue.nobackground
   aside.gdbar.right
