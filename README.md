@@ -19,9 +19,9 @@ This is a template for authoring HTML5 slide decks. Based on
 
         harp server
         
-   Open your browser and go to [http://localhost:9000/slides.html](http://localhost:9000/slides.html)
+   Open your browser and go to [http://localhost:9000/](http://localhost:9000/)
    
-That's it! Now you can open `slides.jade` in your `$EDITOR` and start hacking away.
+That's it! Now you can open `index.jade` in your `$EDITOR` and start hacking away.
 
 [harp]: http://harpjs.com
 
@@ -55,9 +55,9 @@ Again, make sure you have Harp installed. Navigate to your slide directory and r
 The slides contain a presenter mode feature (beta) to view + control the slides
 from a popup window.
 
-To enable presenter mode, add `presentme=true` to the URL: [http://localhost:1337/slides.html?presentme=true](http://localhost:1337/slides.html?presentme=true)
+To enable presenter mode, add `presentme=true` to the URL: [http://localhost:9000/?presentme=true](http://localhost:9000/?presentme=true)
 
-To disable presenter mode, hit [http://localhost:1337/slides.html?presentme=false](http://localhost:1337/slides.html?presentme=false)
+To disable presenter mode, hit [http://localhost:9000/?presentme=false](http://localhost:9000/?presentme=false)
 
 Presenter mode is sticky, so refreshing the page will persist your settings.
 
