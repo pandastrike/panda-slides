@@ -8,19 +8,19 @@ This is a template for authoring HTML5 slide decks. Based on
 1. Install [Harp][harp], if you don't already have it:
 
         npm install -g harp
-       
+
 2. Create a new slide deck:
 
         harp init [name] -b pandastrike/panda-slides
-   
-   **NOTE**: If `name` is ommited, slides will be created in the current directory.
-    
+
+   **NOTE**: If `name` is omitted, slides will be created in the current directory.
+
 3. Start a server for live preview:
 
         harp server
-        
+
    Open your browser and go to [http://localhost:9000/](http://localhost:9000/)
-   
+
 That's it! Now you can open `index.jade` in your `$EDITOR` and start hacking away.
 
 [harp]: http://harpjs.com
