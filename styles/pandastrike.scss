@@ -555,6 +555,31 @@ article.smaller {
   }
 }
 
+i {
+  padding: 5px;
+
+  &.small {
+    font-size: 1.25rem;
+  }
+
+  &.medium {
+    font-size: 2.5rem;
+  }
+
+  &.large {
+    font-size: 5rem;
+  }
+
+  &.huge {
+    font-size: 10rem;
+  }
+
+  &.ginormous {
+    font-size: 20rem;
+  }
+
+}
+
 /* Builds */
 
 .build {
