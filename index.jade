@@ -346,18 +346,38 @@ slide
 
 slide
   hgroup
-   h2 Font Awesome included!
+    h2 Font Awesome included!
   article
-   :markdown
-     * Panda Slides includes with [Font Awesome](http://fontawesome.io)
-     * Quickly add a large variety of scalable vector symbols
-     to your presentation
+    :markdown
+      * Panda Slides includes [Font Awesome](http://fontawesome.io)
+      * Quickly add a large variety of scalable vector symbols
+      to your presentation
 
-   i.fa.fa-bicycle.small
-   i.fa.fa-line-chart.medium
-   i.fa.fa-futbol-o.large
-   i.fa.fa-beer.huge
-   i.fa.fa-bomb.ginormous
+    table(style="border-bottom: none;")
+      tr
+        // row empty on purpose
+      tr
+        td
+          i.fa.fa-bicycle.small
+        td
+          i.fa.fa-line-chart.medium
+        td
+          i.fa.fa-futbol-o.large
+        td
+          i.fa.fa-beer.huge
+        td
+          i.fa.fa-bomb.ginormous
+      tr
+        td
+          code(style="font-weight: normal;") .small
+        td
+          code .medium
+        td
+          code .large
+        td
+          code .huge
+        td
+          code .ginormous
 
 slide.segue.dark.nobackground
   aside.gdbar
